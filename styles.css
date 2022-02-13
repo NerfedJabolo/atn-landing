@@ -13,6 +13,8 @@
     --transition-long: 500ms ease-out;
 }
 
+/*Standard*/
+
 html {
     font-size: 18px;
     font-weight: 200;
@@ -32,6 +34,8 @@ body {
     background: var(--bg-color);
     color: var(--fg-color);
 }
+
+/*NAVBAR*/
 
 header {
     position: fixed;
@@ -124,8 +128,38 @@ header a:hover > i {
     display: none;
     cursor: pointer;
 }
+/*
+Hero
+*/
+
+.hero {
+    height: 400px;
+    width: 100vw;
+}
+.hero > .half1 {
+    width: 50vw;
+    height: 400px;
+    background-color: green;
+}
+
+
+.gradient-text .grad1 {
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text .grad2 {
+    background-image: linear-gradient(45deg, #cc69f9, #0a4955);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 @media screen and (max-width: 768px) {
+    /*NAVBAR*/
     header {
         justify-content: space-between;
         align-items: center;
@@ -217,5 +251,10 @@ header a:hover > i {
 
     #nav-toggle:checked + * + nav {
         clip-path: circle(125vmax at 100% 0%);
+    }
+
+    /*HERO*/
+    .hero .half1 {
+        width: 100vw;
     }
 }
